@@ -56,6 +56,7 @@ btngetdata =(Button)findViewById(R.id.btngetdata);
 
             if(name.equals("") || email.equals("") || roll.equals("") ||address.equals("")||branch.equals("")){
                 Toast.makeText(MainActivity.this,"Please fill all the fields",Toast.LENGTH_LONG).show();
+                return;
             }else {
                 helpher = new DatabaseHelpher(MainActivity.this);
                 helpher.insertIntoDB(name, email, roll, address, branch);
